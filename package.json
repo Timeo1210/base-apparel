@@ -1,0 +1,19 @@
+{
+  "name": "base-apparel",
+  "version": "1.0.0",
+  "description": "Maquette of base-apparel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Timeo1210/base-apparel.git"
+  },
+  "author": "Boulhol Timeo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Timeo1210/base-apparel/issues"
+  },
+  "homepage": "https://github.com/Timeo1210/base-apparel#readme"
+}
