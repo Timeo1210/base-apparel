@@ -1,0 +1,214 @@
+:root {
+    --desaturated-red: #ce9797;
+    --soft-red: #f96262;
+    --dark-grayish-red: #413a3a;
+    --linear-white: linear-gradient(135deg, #ffffff, #fff5f5);
+    --linear-red: linear-gradient(135deg, #f8bfbf,#ee8c8c);
+    --image-margin-top-bottom: 3rem
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url("../img/bg-pattern-desktop.svg");
+    background-size: cover;
+    font-size: 16px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    height: 100%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-rows: 15% auto 4fr;
+    grid-template-columns: auto calc((100vh * 0.7625));
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.wrapper__header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper__header__logoWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: calc(100% / 6);
+}
+
+.wrapper__header__logoWrapper__logo {
+    height: 33px;
+    width: 158px;
+}
+
+.wrapper__main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: calc(100% / 6);
+    margin-top: 5rem;
+    margin-right: 4rem;
+}
+
+.main__title {
+    font-size: 5rem;
+    line-height: 1.1;
+    letter-spacing: 1.5rem;
+    text-transform: uppercase;
+    color: var(--dark-grayish-red);
+    text-align: left;
+    margin: 0;
+    margin-bottom: 0.4rem;
+}
+
+.main__title--light-text {
+    display: block;
+    color: var(--desaturated-red);
+    font-weight: 300;
+}
+
+.main__text {
+    max-width: 70%;
+    font-size: 1.3rem;
+    line-height: 2;
+    color: var(--desaturated-red);
+    text-align: left;
+}
+
+.main__form {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+}
+
+.main__form__input {
+    height: 65px;
+    width: 65%;
+    border: 1px solid hsl(0, 36%, 70%, 0.5);
+    border-radius: 35px;
+    background: transparent;
+    padding-left: 4%;
+    font-size: 1.3rem;
+    outline: none;
+    color: hsl(0, 36%, 70%, 0.7);
+}
+
+.main__form__input::placeholder {
+    color: hsl(0, 36%, 70%, 0.7);
+    font-weight: 300;
+}
+
+.main__form__input:invalid {
+    border: 2px solid var(--soft-red);
+}
+
+.main__form__button {
+    border: 0;
+    background: linear-gradient(135deg, #f8bfbf,#ee8c8c);
+    padding: 0 6%;
+    border-radius: 35px;
+    margin-left: -12%;
+    box-shadow: 0px 8px 20px -15px var(--dark-grayish-red);
+}
+
+.section__image {
+    background-image: url("../img/hero-desktop.jpg");
+    background-size: cover;
+    height: 100vh;
+    grid-column: 2 / 2;
+    grid-row: 1 / 3;
+}
+
+@media (max-width: 1380px) {
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        max-width: 800px;
+    }
+
+    .wrapper__header {
+        margin: 5rem 0;
+    }
+    
+    .section__image {
+        background-image: url("../img/hero-mobile.jpg");
+        width: 375px;
+        height: 250px;
+    }
+
+    .wrapper__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    .main__title {
+        text-align: center;
+    }
+
+    .main__text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main__form {
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__form__button {
+        width: 77px;
+    }
+
+}
+
+@media (max-width: 515px) {
+
+    .main__title {
+        font-size: 3rem;
+    }
+
+    .wrapper__header__logoWrapper {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .main__form {
+        width: 100%;
+    }
+
+    .main__form__input {
+        width: 100%;
+    }
+
+    .main__form__button {
+        margin-left: -21%;
+    }
+
+}
